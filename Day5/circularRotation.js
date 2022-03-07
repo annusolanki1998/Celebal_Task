@@ -8,4 +8,4 @@ function rotate(array, stepsToShift) {
 }
 
 let x = rotate([3,5,4,6,2],2)
-console.log(x);
+console.log(x); 

@@ -1,0 +1,18 @@
+function taumBday(b, w, bc, wc, z) {
+    
+    const gifts = BigInt(b) + BigInt(w);
+
+    const whiteGifts = gifts * BigInt(wc) + (BigInt(b) * BigInt(z));
+    const blackGifts = gifts * BigInt(bc) + (BigInt(w) * BigInt(z));
+
+    let min = BigInt(b) * BigInt(bc) + BigInt(w) * BigInt(wc);
+
+    (blackGifts < min) && (min = blackGifts);
+    (whiteGifts < min) && (min = whiteGifts);
+
+    return min;
+}
+
+let x = taumBday(3,3,1,9,2)
+
+console.log(x);
